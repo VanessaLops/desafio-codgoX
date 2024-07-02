@@ -77,7 +77,7 @@ const Header: React.FC = () => {
             onClick={toggleDrawer}
           >
             <ShoppingCartIcon style={{ color: "#FFFFFF" }} />
-            <span>{cartItems.length}</span>
+            <Typography color="#FFFFFF">{cartItems.length}</Typography>
           </IconButton>
         </Toolbar>
       </AppBar>
