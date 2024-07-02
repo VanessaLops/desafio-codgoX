@@ -25,4 +25,5 @@ export const cardStyles = {
     padding: { xs: 2, md: 3 },
     textAlign: { xs: "center", md: "left" },
   },
+ 
 };

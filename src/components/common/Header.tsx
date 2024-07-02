@@ -24,6 +24,7 @@ import {
   AddCircleOutlineOutlined,
   RemoveCircleOutlineOutlined,
 } from "@mui/icons-material";
+import { cardStyles } from "./styles";
 
 interface CartItem {
   id: number;
@@ -63,17 +64,9 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <AppBar
-        position="fixed"
-        sx={{ backgroundColor: "#0F52BA", boxShadow: "none" }}
-      >
+      <AppBar position="fixed" sx={cardStyles.base}>
         <Toolbar>
-          <Typography
-            variant="h6"
-            component={Link}
-            to="/"
-            sx={{ flexGrow: 1, color: "#FFFFFF", textDecoration: "none" }}
-          >
+          <Typography variant="h6" component={Link} to="/" sx={cardStyles.home}>
             Neu Loja
           </Typography>
           <IconButton
@@ -94,9 +87,9 @@ const Header: React.FC = () => {
           direction="column"
           alignItems="center"
           justifyContent="center"
-          sx={{ width: 300 }}
+          sx={cardStyles.gridContainer}
         >
-          <Typography variant="h6" sx={{ margin: 2 }}>
+          <Typography variant="h6" sx={cardStyles.logo}>
             Meu Carrinho
           </Typography>
           <List sx={{ width: "100%" }}>
@@ -108,7 +101,7 @@ const Header: React.FC = () => {
                   </ListItemAvatar>
                   <ListItemText
                     primary={item.nome}
-                    secondary={`${item.nome} Preço: R$ ${item.preco}`}
+                    secondary={`Preço: R$ ${item.preco}`}
                   />
                   <MuiIconButton
                     aria-label="remove"

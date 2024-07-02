@@ -15,7 +15,7 @@ export const itemsParaCompra: Item[] = [
     nome: "Notebook",
     preco: 3500.0,
     descricao: "Notebook de alta performance com 16GB de RAM e 512GB SSD.",
-    imagem: "https://imgs.casasbahia.com.br/55065634/1g.jpg",
+    imagem: "https://imgs.casasbahia.com.br/55065685/1g.jpg",
     SKU: "sb21121876553352856",
   },
   {

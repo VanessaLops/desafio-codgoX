@@ -32,11 +32,11 @@ const ProductCard: React.FC = () => {
                     />
 
                     <Grid p={2}>
-                      <Typography variant="h6" color="textSecondary">
+                      <Typography variant="h6" color="secondary">
                         {item.nome}
                       </Typography>
 
-                      <Typography variant="body2" color="textSecondary">
+                      <Typography variant="body2" color="secondary">
                         {item.descricao}
                       </Typography>
 
