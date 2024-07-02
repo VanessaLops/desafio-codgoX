@@ -18,6 +18,7 @@ import {
   Divider,
   IconButton as MuiIconButton,
   Typography as MuiTypography,
+  Box,
 } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import {
@@ -103,19 +104,23 @@ const Header: React.FC = () => {
                     primary={item.nome}
                     secondary={`Preço: R$ ${item.preco}`}
                   />
-                  <MuiIconButton
-                    aria-label="remove"
-                    onClick={() => handleDecreaseQuantity(item.id)}
-                  >
-                    <RemoveCircleOutlineOutlined />
-                  </MuiIconButton>
-                  <MuiTypography>{item.quantity}</MuiTypography>
-                  <MuiIconButton
-                    aria-label="add"
-                    onClick={() => handleIncreaseQuantity(item.id)}
-                  >
-                    <AddCircleOutlineOutlined />
-                  </MuiIconButton>
+                  <Box display="flex" alignItems="center">
+                    <MuiIconButton
+                      aria-label="remove"
+                      onClick={() => handleDecreaseQuantity(item.id)}
+                    >
+                      <RemoveCircleOutlineOutlined />
+                    </MuiIconButton>
+                    <MuiTypography sx={{ mx: 1 }}>
+                      {item.quantity}
+                    </MuiTypography>
+                    <MuiIconButton
+                      aria-label="add"
+                      onClick={() => handleIncreaseQuantity(item.id)}
+                    >
+                      <AddCircleOutlineOutlined />
+                    </MuiIconButton>
+                  </Box>
                   <MuiIconButton
                     edge="end"
                     aria-label="delete"
